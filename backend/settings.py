@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-_%)y))=!g#-6o1tb&rij^e_p8z&t810#*#(9--g0yxz)&5*t6k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['backend.mapyourfreedom.com']
+ALLOWED_HOSTS = ['backend.mapyourfreedom.com', '24.144.97.249']
 
 
 # Application definition

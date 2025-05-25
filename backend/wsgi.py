@@ -9,14 +9,9 @@ https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/
 
 import os
 import sys
-
-# Adjust these paths
-project_home = '/home/mapyourfreedom/public_html/backend.mapyourfreedom.com/backend'
-if project_home not in sys.path:
-    sys.path.insert(0, project_home)
-
 from django.core.wsgi import get_wsgi_application
 
+sys.path.append('/home/MapYourFreedom/MapYourFreedom-Backend/venv/lib/python3.12/site-packages/')
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')
 
 application = get_wsgi_application()
