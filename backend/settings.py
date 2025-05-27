@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-_%)y))=!g#-6o1tb&rij^e_p8z&t810#*#(9--g0yxz)&5*t6k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['backend.mapyourfreedom.com', '24.144.97.249']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1' ,'backend.mapyourfreedom.com', '24.144.97.249']
 
 
 # Application definition
@@ -175,4 +175,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 CORS_ALLOW_ALL_ORIGINS = True
 
 STRIPE_SECRET_KEY = 'sk_test_51PY35q2MdkSGhrIhXsqDl4pLlY2I2f09cTpl0mwXybe0nTkgl2MWjmTK1UlsKhcZKGfXbvk68ctGbPCsqz7xqgDE00vlSCOR1G'
-STRIPE_WEBHOOK_SECRET = 'whsec_e64ff648112f8d76c5354e81c425790f651b2e035654c83333ae39814e0f135f'
+STRIPE_WEBHOOK_SECRET = 'whsec_Fl2qyhtldLQC72uNVfegN8Q21ZKcKwVV'

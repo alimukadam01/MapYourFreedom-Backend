@@ -26,7 +26,7 @@ def checkout(request):
         }, status=status.HTTP_404_NOT_FOUND)
 
     try:
-        payment = Payment.objects.create(user_id = request.user.id)
+        payment = Payment.objects.create(user_id = request.user.id, book_id=book.id)
         checkout_session = create_checkout_session(payment.id, book)
 
         return Response({
@@ -55,11 +55,14 @@ def stripe_webhook(request):
         if event["type"] == "checkout.session.completed":
             checkout_obj = event["data"]["object"]
 
-
             payment = Payment.objects.get(id = checkout_obj['client_reference_id'])
             user = payment.user
-            
-            user.has_book_access = True
+            book = payment.book
+
+            if book.language == 'english':
+                user.has_ev_access = True
+            elif book.language == 'spanish':
+                user.has_sv_access = True
 
             payment.currency = checkout_obj.get('currency')
             payment.total_amount = checkout_obj['amount_total']

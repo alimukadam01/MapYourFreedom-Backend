@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+from core.models import Book
 
 # Create your models here.
 
@@ -7,6 +8,7 @@ User = get_user_model()
 
 class Payment(models.Model): 
     user = models.ForeignKey(User, models.CASCADE)
+    book = models.ForeignKey(Book, models.CASCADE, blank=True, null=True)
     date_created = models.DateTimeField(auto_now_add=True)
     total_amount = models.FloatField(null=True, blank=True)
     currency = models.CharField(max_length=256, null=True, blank=True)
