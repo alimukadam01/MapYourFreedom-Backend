@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-_%)y))=!g#-6o1tb&rij^e_p8z&t810#*#(9--g0yxz)&5*t6k'
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -174,5 +174,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 CORS_ALLOW_ALL_ORIGINS = True
 
-STRIPE_SECRET_KEY = 'sk_test_51PY35q2MdkSGhrIhXsqDl4pLlY2I2f09cTpl0mwXybe0nTkgl2MWjmTK1UlsKhcZKGfXbvk68ctGbPCsqz7xqgDE00vlSCOR1G'
-STRIPE_WEBHOOK_SECRET = 'whsec_Fl2qyhtldLQC72uNVfegN8Q21ZKcKwVV'
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
+STRIPE_WEBHOOK_SECRET = os.getenv('STRIPE_WEBHOOK_SECRET')

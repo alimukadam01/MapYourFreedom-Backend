@@ -19,3 +19,6 @@ class Payment(models.Model):
     customer_email = models.EmailField(null=True, blank=True)
     session_created_at = models.DateTimeField(null=True, blank=True)
 
+    def __str__(self):
+        return f"{self.customer_email}: {self.book.language}"
+
