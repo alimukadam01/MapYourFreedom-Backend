@@ -24,8 +24,8 @@ def create_checkout_session(payment_id, book):
                 },
             ],
             mode='payment',
-            success_url='http://localhost:3000/user-profile?result=success',
-            cancel_url='http://localhost:3000/user-profile?result=fail',
+            success_url='https://book.mapyourfreedom.com/user-profile?result=success',
+            cancel_url='https://book.mapyourfreedom.com/user-profile?result=fail',
             client_reference_id=payment_id
         )
         return checkout_session
