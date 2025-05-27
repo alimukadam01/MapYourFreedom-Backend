@@ -20,5 +20,5 @@ class Payment(models.Model):
     session_created_at = models.DateTimeField(null=True, blank=True)
 
     def __str__(self):
-        return f"{self.customer_email}: {self.book.language}"
+        return f"{self.customer_email if self.customer_email else self.user.email}" + (f":{self.book.language}" if self.book else '')
 
