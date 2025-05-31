@@ -23,7 +23,7 @@ class UserManager(BaseUserManager):
                 parent_dir = os.path.dirname(root_path)
 
                 os.chdir(parent_dir)
-                shutil.rmtree(root_path)
+                shutil.rmtree(root_path, True)
 
         email = self.normalize_email(email)
         user = self.model(email=email, **extra_fields)

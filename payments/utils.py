@@ -17,7 +17,7 @@ def create_checkout_session(payment_id, book):
                         'unit_amount': book.price,
                         'product_data': {
                             'name': book.name,
-                            'images': ["https://www.google.com/imgres?q=map%20your%20freedom&imgurl=https%3A%2F%2Fwww.mapyourfreedom.com%2Fimages%2Fmap-your-freedom-book-cover.png&imgrefurl=https%3A%2F%2Fwww.mapyourfreedom.com%2Fmap-your-freedom-the-book.php&docid=kfR7Fy4MJ5ridM&tbnid=beWHW8v4EcQxgM&vet=12ahUKEwjwvPS05MyMAxVghf0HHdCQIWgQM3oFCIMBEAA..i&w=786&h=692&hcb=2&ved=2ahUKEwjwvPS05MyMAxVghf0HHdCQIWgQM3oFCIMBEAA"]
+                            'images': ["https://backend.mapyourfreedom.com/media/product_images/myf.png"]
                         },
                     },
                     'quantity': 1
